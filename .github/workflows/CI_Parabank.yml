@@ -32,13 +32,6 @@ jobs:
       with:
         chrome-version: 'latest'
         
-    - name: Verify installations
-      run: |
-        google-chrome --version
-        chromedriver --version
-        python --version
-        robot --version
-
     - name: Run Robot Framework tests
       run: |
         export ROBOT_OPTIONS="--variable BROWSER:headlesschrome --variable URL:https://parabank.parasoft.com/parabank/index.htm"
