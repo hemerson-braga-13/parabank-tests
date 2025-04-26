@@ -1,0 +1,3 @@
+robotframework
+robotframework-seleniumlibrary
+selenium==4.9.0

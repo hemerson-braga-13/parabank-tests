@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-26T12:31:27.611651" rpa="false" schemaversion="5">
+<suite id="s1" name="Pb Web Tests" source="C:\Users\Koba\Desktop\Programacao\parabank-tests\tests\pb_web_tests.robot">
+<test id="s1-t1" name="Teste 01: Registrar novo usuário" line="14">
+<kw name="Abrir navegador" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:27.783627" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-26T12:31:27.783242" elapsed="6.310774"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-26T12:31:34.094310" elapsed="0.040121"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:27.782378" elapsed="6.352280"/>
+</kw>
+<kw name="Dado que clico no botao de registro" owner="create">
+<kw name="Clicar na opcao de Registrar" owner="create">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:34.135853" level="INFO">Clicking link 'link=Register'.</msg>
+<arg>link=Register</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:34.135593" elapsed="1.259336"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:34.135405" elapsed="1.259800"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:34.135111" elapsed="1.260213"/>
+</kw>
+<kw name="Quando preencho o formulario de registro" owner="create">
+<kw name="Registrar novo usuário" owner="create">
+<kw name="Gerar Dados Aleatórios" owner="create">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:31:35.399981" level="INFO">${RANDOM_STRING} = hZnQj</msg>
+<var>${RANDOM_STRING}</var>
+<arg>5</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.399635" elapsed="0.000387"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:31:35.400412" level="INFO">${RANDOM_NUMBER} = 004</msg>
+<var>${RANDOM_NUMBER}</var>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.400182" elapsed="0.000263"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.400784" level="INFO">${FIRST_NAME} = Usuario AutohZnQj</msg>
+<var>${FIRST_NAME}</var>
+<arg>Usuario Auto${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.400586" elapsed="0.000231"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.401112" level="INFO">${LAST_NAME} = Ultimo AutohZnQj</msg>
+<var>${LAST_NAME}</var>
+<arg>Ultimo Auto${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.400944" elapsed="0.000200"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.401456" level="INFO">${ADDRESS} = Rua 004 hZnQj</msg>
+<var>${ADDRESS}</var>
+<arg>Rua ${RANDOM_NUMBER} ${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.401272" elapsed="0.000218"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.401776" level="INFO">${CITY} = Cidade hZnQj</msg>
+<var>${CITY}</var>
+<arg>Cidade ${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.401614" elapsed="0.000193"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:31:35.402134" level="INFO">${STATE} = LT</msg>
+<var>${STATE}</var>
+<arg>2</arg>
+<arg>[UPPER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.401931" elapsed="0.000234"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:31:35.402803" level="INFO">${ZIP_CODE} = 66201</msg>
+<var>${ZIP_CODE}</var>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.402496" elapsed="0.000343"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.403172" level="INFO">${PHONE} = 999-004</msg>
+<var>${PHONE}</var>
+<arg>999-${RANDOM_NUMBER}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.402992" elapsed="0.000211"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.403544" level="INFO">${SSN} = 004-004-004</msg>
+<var>${SSN}</var>
+<arg>${RANDOM_NUMBER}-${RANDOM_NUMBER}-${RANDOM_NUMBER}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.403337" elapsed="0.000237"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.403895" level="INFO">${USERNAME} = X_@_X_@_X004</msg>
+<var>${USERNAME}</var>
+<arg>X_@_X_@_X${RANDOM_NUMBER}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.403722" elapsed="0.000201"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:35.404232" level="INFO">${PASSWORD} = X_@_XhZnQj004</msg>
+<var>${PASSWORD}</var>
+<arg>X_@_X${RANDOM_STRING}${RANDOM_NUMBER}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.404046" elapsed="0.000215"/>
+</kw>
+<return>
+<value>${FIRST_NAME}</value>
+<value>${LAST_NAME}</value>
+<value>${ADDRESS}</value>
+<value>${CITY}</value>
+<value>${STATE}</value>
+<value>${ZIP_CODE}</value>
+<value>${PHONE}</value>
+<value>${SSN}</value>
+<value>${USERNAME}</value>
+<value>${PASSWORD}</value>
+<status status="PASS" start="2025-04-26T12:31:35.404331" elapsed="0.000077"/>
+</return>
+<msg time="2025-04-26T12:31:35.404739" level="INFO">${FIRST_NAME} = Usuario AutohZnQj</msg>
+<msg time="2025-04-26T12:31:35.404784" level="INFO">${LAST_NAME} = Ultimo AutohZnQj</msg>
+<msg time="2025-04-26T12:31:35.404824" level="INFO">${ADDRESS} = Rua 004 hZnQj</msg>
+<msg time="2025-04-26T12:31:35.404862" level="INFO">${CITY} = Cidade hZnQj</msg>
+<msg time="2025-04-26T12:31:35.404897" level="INFO">${STATE} = LT</msg>
+<msg time="2025-04-26T12:31:35.404931" level="INFO">${ZIP_CODE} = 66201</msg>
+<msg time="2025-04-26T12:31:35.404965" level="INFO">${PHONE} = 999-004</msg>
+<msg time="2025-04-26T12:31:35.404998" level="INFO">${SSN} = 004-004-004</msg>
+<msg time="2025-04-26T12:31:35.405031" level="INFO">${USERNAME} = X_@_X_@_X004</msg>
+<msg time="2025-04-26T12:31:35.405065" level="INFO">${PASSWORD} = X_@_XhZnQj004</msg>
+<var>${FIRST_NAME}</var>
+<var>${LAST_NAME}</var>
+<var>${ADDRESS}</var>
+<var>${CITY}</var>
+<var>${STATE}</var>
+<var>${ZIP_CODE}</var>
+<var>${PHONE}</var>
+<var>${SSN}</var>
+<var>${USERNAME}</var>
+<var>${PASSWORD}</var>
+<status status="PASS" start="2025-04-26T12:31:35.399199" elapsed="0.005889"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.405452" level="INFO">Typing text 'Usuario AutohZnQj' into text field 'id=customer.firstName'.</msg>
+<arg>${CAMPO_PRIMEIRONOME}</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.405234" elapsed="0.102352"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.508561" level="INFO">Typing text 'Ultimo AutohZnQj' into text field 'id=customer.lastName'.</msg>
+<arg>${CAMPO_ULTIMONOME}</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.507893" elapsed="0.113288"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.621547" level="INFO">Typing text 'Rua 004 hZnQj' into text field 'id=customer.address.street'.</msg>
+<arg>${CAMPO_RUA}</arg>
+<arg>${ADDRESS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.621347" elapsed="0.061777"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.683496" level="INFO">Typing text 'Cidade hZnQj' into text field 'id=customer.address.city'.</msg>
+<arg>${CAMPO_CIDADE}</arg>
+<arg>${CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.683295" elapsed="0.057992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.741666" level="INFO">Typing text 'LT' into text field 'id=customer.address.state'.</msg>
+<arg>${CAMPO_ESTADO}</arg>
+<arg>${STATE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.741468" elapsed="0.077389"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.819598" level="INFO">Typing text '66201' into text field 'id=customer.address.zipCode'.</msg>
+<arg>${CAMPO_CEP}</arg>
+<arg>${ZIP_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.819181" elapsed="0.054366"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.873907" level="INFO">Typing text '999-004' into text field 'id=customer.phoneNumber'.</msg>
+<arg>${CAMPO_NUMEROTELEFONE}</arg>
+<arg>${PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.873709" elapsed="0.092312"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:35.966888" level="INFO">Typing text '004-004-004' into text field 'id=customer.ssn'.</msg>
+<arg>${CAMPO_CPF}</arg>
+<arg>${SSN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:35.966408" elapsed="0.071015"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:36.037836" level="INFO">Typing text 'X_@_X_@_X004' into text field 'id=customer.username'.</msg>
+<arg>${CAMPO_CADASTRO_USUARIO}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:36.037616" elapsed="0.075766"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:36.114007" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'id=customer.password'.</msg>
+<arg>${CAMPO_CADASTRO_SENHA}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:36.113728" elapsed="0.128357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:36.242704" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'id=repeatedPassword'.</msg>
+<arg>${CAMPO_CADASTRO_SENHAREPETIDA}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:36.242351" elapsed="0.210055"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:36.453045" level="INFO">Clicking button 'css=[value="Register"]'.</msg>
+<arg>${BOTAO_REGISTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:36.452704" elapsed="0.752355"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.205872" level="INFO">${USERNAME} = X_@_X_@_X004</msg>
+<arg>${USERNAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.205484" elapsed="0.000477"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.206424" level="INFO">${PASSWORD} = X_@_XhZnQj004</msg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.206177" elapsed="0.000298"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.206955" level="INFO">${FIRST_NAME} = Usuario AutohZnQj</msg>
+<arg>${FIRST_NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.206609" elapsed="0.000391"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.207275" level="INFO">${LAST_NAME} = Ultimo AutohZnQj</msg>
+<arg>${LAST_NAME}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.207122" elapsed="0.000194"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.207572" level="INFO">${ADDRESS} = Rua 004 hZnQj</msg>
+<arg>${ADDRESS}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.207429" elapsed="0.000182"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.207860" level="INFO">${CITY} = Cidade hZnQj</msg>
+<arg>${CITY}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.207721" elapsed="0.000178"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.208779" level="INFO">${STATE} = LT</msg>
+<arg>${STATE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.208000" elapsed="0.000899"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.209320" level="INFO">${ZIP_CODE} = 66201</msg>
+<arg>${ZIP_CODE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.209084" elapsed="0.000287"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.209753" level="INFO">${PHONE} = 999-004</msg>
+<arg>${PHONE}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.209529" elapsed="0.000268"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.210065" level="INFO">${SSN} = 004-004-004</msg>
+<arg>${SSN}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.209917" elapsed="0.000189"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:35.398624" elapsed="1.811561"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:35.397738" elapsed="1.812502"/>
+</kw>
+<kw name="Então devo me cadastrar com sucesso" owner="create">
+<kw name="Validar novo registro" owner="create">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:37.225997" level="INFO">Current page contains text 'Welcome X_@_X_@_X004'.</msg>
+<arg>Welcome ${USERNAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.211568" elapsed="0.014567"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-26T12:31:37.226665" level="INFO">Dados de Cadastro Salvo com Sucesso</msg>
+<arg>Dados de Cadastro Salvo com Sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.226436" elapsed="0.000577"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:37.210968" elapsed="0.016164"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:37.324495" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.227303" elapsed="0.097308"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:37.210686" elapsed="0.114013"/>
+</kw>
+<kw name="Fechar navegador" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-26T12:31:37.325540" elapsed="2.264860"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:37.325096" elapsed="2.265522"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:27.781571" elapsed="11.809386"/>
+</test>
+<test id="s1-t2" name="Teste 02: Fazer login e verificar informações do usuário" line="19">
+<kw name="Abrir navegador" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:39.593735" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-26T12:31:39.593349" elapsed="4.016978"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-26T12:31:43.610646" elapsed="0.063458"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:39.592836" elapsed="4.081424"/>
+</kw>
+<kw name="Dado que eu faço login" owner="common">
+<kw name="Fazer login" owner="common">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:43.677045" level="INFO">Typing text 'X_@_X_@_X004' into text field 'css=[name=username]'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:43.676697" elapsed="0.162885"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:43.840336" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'css=[name=password]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:43.839946" elapsed="0.089312"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:43.929653" level="INFO">Clicking button 'css=[value="Log In"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:43.929454" elapsed="1.708537"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:43.676166" elapsed="1.961932"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-04-26T12:31:43.675513" elapsed="1.962643"/>
+</kw>
+<kw name="Quando seleciono a opcao de atualizacao de perfil" owner="update">
+<kw name="Selecionar opção de atualizacao de info de contato" owner="update">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:45.639062" level="INFO">Clicking element 'css=#leftPanel &gt; ul &gt; li:nth-child(6) &gt; a'.</msg>
+<arg>${OPCAO_LINK_ATUALIZARINFO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:45.638908" elapsed="0.502175"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:45.638717" elapsed="0.502598"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:45.638461" elapsed="0.502941"/>
+</kw>
+<kw name="Então devo visualizar os dados do meu perfil com sucesso" owner="read">
+<kw name="Verificar informações do usuário" owner="read">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-26T12:31:46.145050" level="INFO">&amp;{campos} = { customer.firstName=Usuario AutohZnQj | customer.lastName=Ultimo AutohZnQj | customer.address.street=Rua 004 hZnQj | customer.address.city=Cidade hZnQj | customer.address.state=LT | customer.address....</msg>
+<var>&amp;{campos}</var>
+<arg>customer.firstName=${first_name}</arg>
+<arg>customer.lastName=${last_name}</arg>
+<arg>customer.address.street=${address}</arg>
+<arg>customer.address.city=${city}</arg>
+<arg>customer.address.state=${state}</arg>
+<arg>customer.address.zipCode=${zip_code}</arg>
+<arg>customer.phoneNumber=${phone}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-26T12:31:46.144406" elapsed="0.000686"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:46.145638" level="INFO">${seletor} = css=[id="customer.firstName"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:46.145484" elapsed="0.000184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:47.146128" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:46.145762" elapsed="1.000704"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:47.210239" level="INFO">Text field 'css=[id="customer.firstName"]' contains text 'Usuario AutohZnQj'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:47.147099" elapsed="0.063268"/>
+</kw>
+<var name="${id}">customer.firstName</var>
+<var name="${valor}">Usuario AutohZnQj</var>
+<status status="PASS" start="2025-04-26T12:31:46.145369" elapsed="1.065062"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:47.210870" level="INFO">${seletor} = css=[id="customer.lastName"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:47.210699" elapsed="0.000195"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:48.211284" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:47.210994" elapsed="1.000635"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:48.266860" level="INFO">Text field 'css=[id="customer.lastName"]' contains text 'Ultimo AutohZnQj'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:48.212243" elapsed="0.054695"/>
+</kw>
+<var name="${id}">customer.lastName</var>
+<var name="${valor}">Ultimo AutohZnQj</var>
+<status status="PASS" start="2025-04-26T12:31:47.210588" elapsed="1.056408"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:48.267392" level="INFO">${seletor} = css=[id="customer.address.street"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:48.267237" elapsed="0.000179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:49.267902" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:48.267504" elapsed="1.000514"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:49.307966" level="INFO">Text field 'css=[id="customer.address.street"]' contains text 'Rua 004 hZnQj'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:49.268376" elapsed="0.039701"/>
+</kw>
+<var name="${id}">customer.address.street</var>
+<var name="${valor}">Rua 004 hZnQj</var>
+<status status="PASS" start="2025-04-26T12:31:48.267132" elapsed="1.041020"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:49.308655" level="INFO">${seletor} = css=[id="customer.address.city"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:49.308463" elapsed="0.000220"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:50.309358" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:49.308789" elapsed="1.000696"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:50.337898" level="INFO">Text field 'css=[id="customer.address.city"]' contains text 'Cidade hZnQj'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:50.309704" elapsed="0.028277"/>
+</kw>
+<var name="${id}">customer.address.city</var>
+<var name="${valor}">Cidade hZnQj</var>
+<status status="PASS" start="2025-04-26T12:31:49.308323" elapsed="1.029719"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:50.338441" level="INFO">${seletor} = css=[id="customer.address.state"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:50.338285" elapsed="0.000179"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:51.339034" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:50.338554" elapsed="1.000577"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:51.363612" level="INFO">Text field 'css=[id="customer.address.state"]' contains text 'LT'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:51.339315" elapsed="0.024397"/>
+</kw>
+<var name="${id}">customer.address.state</var>
+<var name="${valor}">LT</var>
+<status status="PASS" start="2025-04-26T12:31:50.338177" elapsed="1.025631"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:51.364409" level="INFO">${seletor} = css=[id="customer.address.zipCode"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:51.364141" elapsed="0.000312"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:52.365186" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:51.364553" elapsed="1.000876"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:52.401098" level="INFO">Text field 'css=[id="customer.address.zipCode"]' contains text '66201'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:52.365857" elapsed="0.035374"/>
+</kw>
+<var name="${id}">customer.address.zipCode</var>
+<var name="${valor}">66201</var>
+<status status="PASS" start="2025-04-26T12:31:51.363995" elapsed="1.037302"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:31:52.401698" level="INFO">${seletor} = css=[id="customer.phoneNumber"]</msg>
+<var>${seletor}</var>
+<arg>css=[id="${id}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:31:52.401539" elapsed="0.000184"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-26T12:31:53.402143" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-26T12:31:52.401812" elapsed="1.000687"/>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:53.453451" level="INFO">Text field 'css=[id="customer.phoneNumber"]' contains text '999-004'.</msg>
+<arg>${seletor}</arg>
+<arg>${valor}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:31:53.403109" elapsed="0.050421"/>
+</kw>
+<var name="${id}">customer.phoneNumber</var>
+<var name="${valor}">999-004</var>
+<status status="PASS" start="2025-04-26T12:31:52.401430" elapsed="1.052157"/>
+</iter>
+<var>${id}</var>
+<var>${valor}</var>
+<value>&amp;{campos}</value>
+<status status="PASS" start="2025-04-26T12:31:46.145197" elapsed="7.308441"/>
+</for>
+<arg>${FIRST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<arg>${ADDRESS}</arg>
+<arg>${CITY}</arg>
+<arg>${STATE}</arg>
+<arg>${ZIP_CODE}</arg>
+<arg>${PHONE}</arg>
+<status status="PASS" start="2025-04-26T12:31:46.143372" elapsed="7.310350"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:53.547884" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-26T12:31:53.453856" elapsed="0.094117"/>
+</kw>
+<arg>${FIRST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<arg>${ADDRESS}</arg>
+<arg>${CITY}</arg>
+<arg>${STATE}</arg>
+<arg>${ZIP_CODE}</arg>
+<arg>${PHONE}</arg>
+<status status="PASS" start="2025-04-26T12:31:46.141977" elapsed="7.406078"/>
+</kw>
+<kw name="Fechar navegador" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-26T12:31:53.548711" elapsed="2.148495"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:53.548394" elapsed="2.149565"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:39.592011" elapsed="16.106542"/>
+</test>
+<test id="s1-t3" name="Teste 03: Atualizar informações do perfil do usuário" line="24">
+<kw name="Abrir navegador" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:55.704015" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-26T12:31:55.703227" elapsed="3.737845"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-26T12:31:59.441228" elapsed="0.026300"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:55.702121" elapsed="3.765507"/>
+</kw>
+<kw name="Dado que eu faço login" owner="common">
+<kw name="Fazer login" owner="common">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:59.469097" level="INFO">Typing text 'X_@_X_@_X004' into text field 'css=[name=username]'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:59.468918" elapsed="0.075802"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:59.545298" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'css=[name=password]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:59.545078" elapsed="0.068944"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:31:59.614412" level="INFO">Clicking button 'css=[value="Log In"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:31:59.614225" elapsed="1.157442"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:59.468679" elapsed="1.303114"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-04-26T12:31:59.468210" elapsed="1.303637"/>
+</kw>
+<kw name="Quando seleciono a opcao de atualizacao de perfil" owner="update">
+<kw name="Selecionar opção de atualizacao de info de contato" owner="update">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:00.773151" level="INFO">Clicking element 'css=#leftPanel &gt; ul &gt; li:nth-child(6) &gt; a'.</msg>
+<arg>${OPCAO_LINK_ATUALIZARINFO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:00.772803" elapsed="0.488169"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:00.772568" elapsed="0.488538"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:00.772270" elapsed="0.488890"/>
+</kw>
+<kw name="Então devo atualizar o perfil com sucesso" owner="update">
+<kw name="Atualizar informações do perfil" owner="update">
+<kw name="Gerar Novos Dados Aleatórios" owner="update">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:32:01.263096" level="INFO">${RANDOM_STRING} = aXLRqm</msg>
+<var>${RANDOM_STRING}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.262765" elapsed="0.000405"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:32:01.264038" level="INFO">${RANDOM_NUMBER} = 920</msg>
+<var>${RANDOM_NUMBER}</var>
+<arg>3</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.263759" elapsed="0.000314"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.264569" level="INFO">${UPDATED_FIRST_NAME} = UpdatedaXLRqm</msg>
+<var>${UPDATED_FIRST_NAME}</var>
+<arg>Updated${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.264312" elapsed="0.000286"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.264906" level="INFO">${UPDATED_LAST_NAME} = UseraXLRqm</msg>
+<var>${UPDATED_LAST_NAME}</var>
+<arg>User${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.264715" elapsed="0.000217"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.265205" level="INFO">${UPDATED_ADDRESS} = 920 OutraaXLRqm Rua</msg>
+<var>${UPDATED_ADDRESS}</var>
+<arg>${RANDOM_NUMBER} Outra${RANDOM_STRING} Rua</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.265046" elapsed="0.000183"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.265453" level="INFO">${UPDATED_CITY} = OutraaXLRqmCidade</msg>
+<var>${UPDATED_CITY}</var>
+<arg>Outra${RANDOM_STRING}Cidade</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.265328" elapsed="0.000148"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:32:01.265736" level="INFO">${UPDATED_STATE} = KK</msg>
+<var>${UPDATED_STATE}</var>
+<arg>2</arg>
+<arg>[UPPER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.265572" elapsed="0.000188"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-04-26T12:32:01.266006" level="INFO">${UPDATED_ZIP_CODE} = 73000</msg>
+<var>${UPDATED_ZIP_CODE}</var>
+<arg>5</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.265857" elapsed="0.000173"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.266276" level="INFO">${UPDATED_PHONE} = 777-920aXLRqm</msg>
+<var>${UPDATED_PHONE}</var>
+<arg>777-${RANDOM_NUMBER}${RANDOM_STRING}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.266128" elapsed="0.000171"/>
+</kw>
+<return>
+<value>${UPDATED_FIRST_NAME}</value>
+<value>${UPDATED_LAST_NAME}</value>
+<value>${UPDATED_ADDRESS}</value>
+<value>${UPDATED_CITY}</value>
+<value>${UPDATED_STATE}</value>
+<value>${UPDATED_ZIP_CODE}</value>
+<value>${UPDATED_PHONE}</value>
+<status status="PASS" start="2025-04-26T12:32:01.266353" elapsed="0.000049"/>
+</return>
+<msg time="2025-04-26T12:32:01.266632" level="INFO">${UPDATED_FIRST_NAME} = UpdatedaXLRqm</msg>
+<msg time="2025-04-26T12:32:01.266669" level="INFO">${UPDATED_LAST_NAME} = UseraXLRqm</msg>
+<msg time="2025-04-26T12:32:01.266702" level="INFO">${UPDATED_ADDRESS} = 920 OutraaXLRqm Rua</msg>
+<msg time="2025-04-26T12:32:01.266732" level="INFO">${UPDATED_CITY} = OutraaXLRqmCidade</msg>
+<msg time="2025-04-26T12:32:01.266761" level="INFO">${UPDATED_STATE} = KK</msg>
+<msg time="2025-04-26T12:32:01.266790" level="INFO">${UPDATED_ZIP_CODE} = 73000</msg>
+<msg time="2025-04-26T12:32:01.266822" level="INFO">${UPDATED_PHONE} = 777-920aXLRqm</msg>
+<var>${UPDATED_FIRST_NAME}</var>
+<var>${UPDATED_LAST_NAME}</var>
+<var>${UPDATED_ADDRESS}</var>
+<var>${UPDATED_CITY}</var>
+<var>${UPDATED_STATE}</var>
+<var>${UPDATED_ZIP_CODE}</var>
+<var>${UPDATED_PHONE}</var>
+<status status="PASS" start="2025-04-26T12:32:01.262563" elapsed="0.004278"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.267115" level="INFO">Typing text 'UpdatedaXLRqm' into text field 'id=customer.firstName'.</msg>
+<arg>${CAMPO_PRIMEIRONOME}</arg>
+<arg>${UPDATED_FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.266953" elapsed="0.076570"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.343921" level="INFO">Typing text 'UseraXLRqm' into text field 'id=customer.lastName'.</msg>
+<arg>${CAMPO_ULTIMONOME}</arg>
+<arg>${UPDATED_LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.343700" elapsed="0.089926"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.434198" level="INFO">Typing text '920 OutraaXLRqm Rua' into text field 'id=customer.address.street'.</msg>
+<arg>${CAMPO_RUA}</arg>
+<arg>${UPDATED_ADDRESS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.433949" elapsed="0.079391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.513938" level="INFO">Typing text 'OutraaXLRqmCidade' into text field 'id=customer.address.city'.</msg>
+<arg>${CAMPO_CIDADE}</arg>
+<arg>${UPDATED_CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.513580" elapsed="0.107363"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.621436" level="INFO">Typing text 'KK' into text field 'id=customer.address.state'.</msg>
+<arg>${CAMPO_ESTADO}</arg>
+<arg>${UPDATED_STATE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.621168" elapsed="0.100807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.722338" level="INFO">Typing text '73000' into text field 'id=customer.address.zipCode'.</msg>
+<arg>${CAMPO_CEP}</arg>
+<arg>${UPDATED_ZIP_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.722141" elapsed="0.055786"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.778355" level="INFO">Typing text '777-920aXLRqm' into text field 'id=customer.phoneNumber'.</msg>
+<arg>${CAMPO_NUMEROTELEFONE}</arg>
+<arg>${UPDATED_PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.778136" elapsed="0.069868"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:01.848375" level="INFO">Clicking button 'css=[value="Update Profile"]'.</msg>
+<arg>${BOTAO_ATUALIZAR_CADASTRO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.848171" elapsed="0.048134"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Profile Updated</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.896540" elapsed="0.009210"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-26T12:32:01.906016" level="INFO">Cadastro Editado com Sucesso</msg>
+<arg>Cadastro Editado com Sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.905907" elapsed="0.000150"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:01.262213" elapsed="0.643904"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:02.031207" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-26T12:32:01.906208" elapsed="0.125089"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:01.261684" elapsed="0.769692"/>
+</kw>
+<kw name="Fechar navegador" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-26T12:32:02.031928" elapsed="2.131062"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:02.031701" elapsed="2.131699"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:31:55.700508" elapsed="8.463404"/>
+</test>
+<test id="s1-t4" name="Teste 04: Apagar Conta de Usuário" line="29">
+<kw name="Abrir navegador" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:04.168962" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-26T12:32:04.168202" elapsed="3.605597"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-26T12:32:07.774177" elapsed="0.037480"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:04.167131" elapsed="3.644729"/>
+</kw>
+<kw name="Dado que eu faço login" owner="common">
+<kw name="Fazer login" owner="common">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:07.813232" level="INFO">Typing text 'X_@_X_@_X004' into text field 'css=[name=username]'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:07.813057" elapsed="0.077146"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:07.891070" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'css=[name=password]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:07.890619" elapsed="0.069497"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:07.960758" level="INFO">Clicking button 'css=[value="Log In"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:07.960478" elapsed="1.841460"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:07.812814" elapsed="1.989258"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-04-26T12:32:07.812372" elapsed="1.989775"/>
+</kw>
+<kw name="Quando deleto o perfil do usuario" owner="delete">
+<kw name="Deletar conta de usuario" owner="delete">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:09.803501" level="INFO">Clicking element 'css=#headerPanel &gt; ul.leftmenu &gt; li:nth-child(6) &gt; a'.</msg>
+<arg>${OPCAO_LINK_PAGINA_ADMINISTRACAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:09.803207" elapsed="0.997724"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_LIMPAR_DATABASE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-26T12:32:10.801236" elapsed="0.024946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:10.826519" level="INFO">Clicking element 'css=[value="CLEAN"]'.</msg>
+<arg>${BOTAO_LIMPAR_DATABASE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:10.826342" elapsed="0.039486"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>${CAMPO_MENSAGEM_DATABASE}</arg>
+<arg>Database Cleaned</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-04-26T12:32:10.865983" elapsed="0.649017"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:11.526183" level="INFO">Element 'css=#rightPanel &gt; p &gt; b' contains text 'Database Cleaned'.</msg>
+<arg>${CAMPO_MENSAGEM_DATABASE}</arg>
+<arg>Database Cleaned</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:32:11.515194" elapsed="0.011068"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-26T12:32:11.526510" level="INFO">Usuario Deletado Com Sucesso</msg>
+<arg>Usuario Deletado Com Sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-26T12:32:11.526403" elapsed="0.000145"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:11.526788" level="INFO">Clicking element 'css=#leftPanel &gt; ul &gt; li:nth-child(8) &gt; a'.</msg>
+<arg>${OPCAO_LINK_DESLOGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:11.526644" elapsed="0.812456"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:09.802927" elapsed="2.536340"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:09.802550" elapsed="2.536786"/>
+</kw>
+<kw name="E faço login com usuario deletado" owner="delete">
+<kw name="Fazer login" owner="common">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:12.344292" level="INFO">Typing text 'X_@_X_@_X004' into text field 'css=[name=username]'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:12.343493" elapsed="0.057565"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:12.401648" level="INFO">Typing text 'X_@_XhZnQj004' into text field 'css=[name=password]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:12.401328" elapsed="0.097866"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:12.501056" level="INFO">Clicking button 'css=[value="Log In"]'.</msg>
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-26T12:32:12.500624" elapsed="1.533352"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:12.341638" elapsed="1.692536"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-04-26T12:32:12.339716" elapsed="1.694522"/>
+</kw>
+<kw name="Então devo verificar que o usuario foi deletado com sucesso" owner="delete">
+<kw name="Verificar delete da conta de usuario" owner="delete">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_MENSAGEM_ERRO_USUARIO}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-26T12:32:14.037321" elapsed="0.046061"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:14.101094" level="INFO">Element 'css=[class="error"]' contains text 'An internal error has occurred and has been logged.'.</msg>
+<arg>${CAMPO_MENSAGEM_ERRO_USUARIO}</arg>
+<arg>An internal error has occurred and has been logged.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-04-26T12:32:14.083616" elapsed="0.017558"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-26T12:32:14.101435" level="INFO">Verificacao de Delete Bem-Sucedida</msg>
+<arg>Verificacao de Delete Bem-Sucedida</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-26T12:32:14.101323" elapsed="0.000151"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:14.035785" elapsed="0.065750"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-04-26T12:32:14.214852" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-04-26T12:32:14.101630" elapsed="0.113330"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:14.034805" elapsed="0.180239"/>
+</kw>
+<kw name="Fechar navegador" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-26T12:32:14.216462" elapsed="2.129021"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:14.215939" elapsed="2.129964"/>
+</kw>
+<status status="PASS" start="2025-04-26T12:32:04.165631" elapsed="12.180856"/>
+</test>
+<doc>Testes CRUD para o site ParaBank</doc>
+<status status="PASS" start="2025-04-26T12:31:27.613417" elapsed="48.735715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Pb Web Tests" id="s1" pass="4" fail="0" skip="0">Pb Web Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-26T12:31:27.758929" level="WARN">Error in file 'C:\Users\Koba\Desktop\Programacao\parabank-tests\resources\create.resource' on line 22: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-04-26T12:31:27.775414" level="WARN">Error in file 'C:\Users\Koba\Desktop\Programacao\parabank-tests\resources\update.resource' on line 21: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
