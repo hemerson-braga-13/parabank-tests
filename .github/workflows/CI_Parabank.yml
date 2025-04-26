@@ -27,9 +27,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install ChromeDriver
+    - name: Install Chrome and ChromeDriver
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: 'latest'
+
+    - name: Verify Chrome installation
       run: |
-        webdrivermanager chrome --linkpath /usr/local/bin
+        google-chrome --version
+        chromedriver --version
 
     - name: Run Robot Framework tests
       run: |
