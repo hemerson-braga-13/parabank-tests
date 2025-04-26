@@ -36,7 +36,7 @@ jobs:
         robot -d results tests/PB_web_tests.robot
 
     - name: Upload test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: robot-results
