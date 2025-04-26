@@ -5,6 +5,7 @@ Resource        ../variables/variables.resource
 
 *** Keywords ***
 Selecionar opção de atualizacao de info de contato
+    Wait Until Element Is Visible    ${OPCAO_LINK_ATUALIZARINFO}    10s 
     Click Element    ${OPCAO_LINK_ATUALIZARINFO} 
 
 Gerar Novos Dados Aleatórios
